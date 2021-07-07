@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(8, 66, 52)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Air Quality index</h2>
+            <h3>Average Temperature (°C)</h3>
+            <input id="first" name="T" type="number ">
+            <h3>Maximum temperature (°C)</h3><br><input id="second" name="TM" required="required">
+            <h3>Minimum temperature (°C)</h3><input id="third" name="Tm" required="required">
+            <h3>Atmospheric pressure at sea level (hPa)</h3><br><input id="fourth" name="SLP" required="required">
+            <h3>Average relative humidity (%)</h3><br><input id="fourth" name="H" required="required">
+            <h3>Average visibility (Km)</h3><br><input id="fourth" name="VV" required="required">
+            <h3>Average wind speed (Km/h)</h3><br><input id="fourth" name="V" required="required">
+            <h3>Maximum sustained wind speed (Km/h)</h3><br><input id="fourth" name="VM" required="required">
+            
+            <br><br><button id="sub" type="submit ">AIR QUALITY INDEX IS : </button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(84, 159, 230);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(245, 218, 168);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: rgb(243, 183, 161);
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: rgb(243, 183, 161);
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: rgb(243, 183, 161);
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: rgb(64, 226, 59);
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
